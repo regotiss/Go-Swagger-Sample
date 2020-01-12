@@ -1,0 +1,25 @@
+definitions:
+  main.Message:
+    properties:
+      message:
+        type: string
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /hello:
+    get:
+      consumes:
+      - application/json
+      description: simple hello message
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Message'
+      tags:
+      - hello
+swagger: "2.0"
